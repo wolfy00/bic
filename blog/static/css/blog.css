@@ -7,6 +7,7 @@
 }
 
 a {
+  
     color:#c410b8;
 }
 
@@ -15,7 +16,7 @@ a {
     float:left;
     padding:10px;
     font-size:xx-large;
-    font-family:URW Chancery L, cursive;
+    font-family:Comic Sans MS, Comic Sans;
     color:white;
 
 }
@@ -25,11 +26,12 @@ a {
     font-size:x-large;
     float:right;
     padding:10px;
+    background-image:linear-gradient(#f525dd,#b000ad,);
 
     }
 .contentcontainer{
 
-    font-family:Comic Sans MS, Comic Sans, cursive; }
+    font-family:Comic Sans MS, Comic Sans; }
 
 .post-area{
     border-right:4px dotted #b000ad;
@@ -80,5 +82,12 @@ border:2px solid white;
     width:30%;
     height:100%;
     color:#b000ad;
-    font-size:large;}
+    font-size:large;
+    }
+
+* {
+  /* For mobile phones: */
+
+   max-width: 100%;}
+
 
