@@ -4,6 +4,8 @@ from django.shortcuts import redirect
 from django.utils import timezone
 from .models import Post,Comment
 from .forms import PostForm,CommentForm
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate
 
 
 def post_list(request):
@@ -63,7 +65,6 @@ def post_remove(request, pk):
     post.delete()
     return redirect('post_list')
 
-
 def add_comment_to_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
@@ -89,3 +90,15 @@ def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
     return redirect('post_detail', pk=comment.post.pk)
+
+
+def sign_up(request):
+    form = UserCreationForm(request.POST)
+    if form.is_valid():
+        form.save()
+        username = form.cleaned_data.get('username')
+        password = form.cleaned_data.get('password1')
+        user = authenticate(username=username, password=password)
+        login(request, user)
+        return redirect('post_list')
+    return render(request, 'sign_up.html', {'form': form})

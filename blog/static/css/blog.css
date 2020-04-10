@@ -29,7 +29,7 @@ a {
     background-image:linear-gradient(#f525dd,#b000ad,);
 
     }
-.contentcontainer{
+*{
 
     font-family:Comic Sans MS, Comic Sans; }
 
@@ -67,11 +67,10 @@ a {
     color:#b000ad;
     font-size:large;
     }
-button a{
-background-image:linear-gradient(#b000ad,#f525dd);
-color:white;
-font-size:large;
-border:2px solid white;
+.btn{
+ font-size:x-large;
+    background-color:#f525dd;
+    border-radius:10px;
 }
 
 .comment{
