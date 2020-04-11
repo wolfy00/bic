@@ -4,6 +4,8 @@
     background-image:linear-gradient(#b000ad,#f525dd);
     height:100px;
     padding:10px 10px 10px 10px;
+    border:4px grooved white;
+    border-radius:20px;
 }
 
 a {
@@ -36,10 +38,11 @@ a {
 .post-area{
     border-right:4px dotted #b000ad;
     float:left;
-    width:60%;
+    width:65%;
     padding:10px;
     height:100%;
     margin-left:10px
+
 }
 
 
@@ -53,22 +56,25 @@ a {
     width:33.33%;
     border-radius:20px;
     margin-left:20px;
-    margin-top:10px;
+    margin-top:20px;
     padding:30px;
    }
 
 
 .welcome{
-    margin-right:20px;
+    margin-right:0px;
     text-align:center;
     float:right;
-    width:30%;
+    width:25%;
     height:100%;
     color:#b000ad;
     font-size:large;
+
     }
+
+
 .btn{
- font-size:x-large;
+    font-size:x-large;
     background-color:#f525dd;
     border-radius:10px;
 }
