@@ -1,7 +1,7 @@
 .page-header{
     color:white;
     width:100%;
-    background-image:linear-gradient(#b000ad,#f525dd);
+    background-color:#2b2929;
     height:100px;
     padding:10px 10px 10px 10px;
     border:4px grooved white;
@@ -9,8 +9,9 @@
 }
 
 a {
-  
-    color:#c410b8;
+
+    color:white;
+    font-weight:10;
 }
 
 
@@ -19,7 +20,7 @@ a {
     padding:10px;
     font-size:xx-large;
     font-family:Comic Sans MS, Comic Sans;
-    color:white;
+    color:#FFDF00;
 
 }
 
@@ -28,36 +29,36 @@ a {
     font-size:x-large;
     float:right;
     padding:10px;
-    background-image:linear-gradient(#f525dd,#b000ad,);
+
 
     }
-*{
+body{
 
+    background-color:black;
     font-family:Comic Sans MS, Comic Sans; }
 
 .post-area{
-    border-right:4px dotted #b000ad;
+    border-right:4px dotted white;
     float:left;
-    width:65%;
+    width:60%;
     padding:10px;
     height:100%;
-    margin-left:10px
+    margin-left:10px;
 
 }
 
 
 .post{
-
-    color:#b000ad;
-    border:2px dashed #b000ad;
-    float:left;
+    background-color:#0f0e0e;
+    border:2px dashed white;
     height:400px;
     overflow:auto;
-    width:33.33%;
+    width:75%;
     border-radius:20px;
-    margin-left:20px;
+    margin-left:10px;
     margin-top:20px;
     padding:30px;
+    color: white;
    }
 
 
@@ -65,29 +66,31 @@ a {
     margin-right:0px;
     text-align:center;
     float:right;
-    width:25%;
+    width:32%;
     height:100%;
-    color:#b000ad;
     font-size:large;
+    color:white;
 
     }
 
 
 .btn{
     font-size:x-large;
-    background-color:#f525dd;
+    background-image:linear-gradient(#827575,#1a1818);
     border-radius:10px;
+    color:white;
 }
 
 .comment{
+    border:2px dashed white;
     margin-left:10px;
     padding:10px 10px 10px 10px;
     position:relative;
-    float:right;
+    border
     width:30%;
     height:100%;
-    color:#b000ad;
     font-size:large;
+    color:white;
     }
 
 * {
