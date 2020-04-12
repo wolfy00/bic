@@ -35,6 +35,6 @@
 {% empty %}
     <p>No comments here yet :(</p>
 {% endfor %}
-<button><a href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a></button>
+<span class="btn"><a href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a></span>
 
 {% endblock %}
