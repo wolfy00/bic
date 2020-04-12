@@ -38,7 +38,7 @@ body{
     font-family:Comic Sans MS, Comic Sans; }
 
 .post-area{
-    border-right:4px dotted white;
+    border-right:4px groove white;
     float:left;
     width:60%;
     padding:10px;
@@ -96,7 +96,7 @@ body{
 
 * {
   /* For mobile phones: */
-
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
    max-width: 100%;}
 
 
