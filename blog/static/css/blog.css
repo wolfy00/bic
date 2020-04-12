@@ -1,16 +1,15 @@
 .page-header{
     color:white;
     width:100%;
-    background-color:#2b2929;
+    background-color:#141313;
     height:100px;
     padding:10px 10px 10px 10px;
-    border:4px grooved white;
     border-radius:25px;
 }
 
 a {
 
-    color:white;
+    color:#FFDF00;
     font-weight:10;
 }
 
@@ -49,8 +48,8 @@ body{
 
 
 .post{
-    background-color:#0f0e0e;
-    border:2px dashed white;
+    background-color:#141313;
+
     height:400px;
     overflow:auto;
     width:75%;
@@ -70,7 +69,7 @@ body{
     width:30%;
     height:100%;
     font-size:large;
-    color:white;
+    color:#FFDF00;
 
     }
 
@@ -95,8 +94,18 @@ body{
     }
 
 * {
-  /* For mobile phones: */
-    font-family: "Comic Sans MS", "Comic Sans";
-   max-width: 100%;}
+   /* For mobile phones: */
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+    max-width: 100%;
+   }
 
-
+.login{
+    background-color:#141313;
+    height:400px;
+    overflow:auto;
+    width:75%;
+    border-radius:20px;
+    margin:60px 60px ;
+    padding:10px 10px 10px 10px;
+    color:#FFDF00;
+}

@@ -1,31 +1,35 @@
 .page-header{
     color:white;
     width:100%;
-    background-image:linear-gradient(#b000ad,#f525dd);
+    background-color:#141313;
     height:100px;
     padding:10px 10px 10px 10px;
+    border-radius:25px;
+    color:#FFDF00;
 
 }
 
 .page-header h1 a{
 
-    color:white;
+     color:#FFDF00;
 }
 
 body{
 
-    font-family: Comic Sans;
+    background-color:black;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
     text-align:center;
 }
 .field {
     padding:10px;
     font-size:xx-large;
-    color:#c410b8;
+    color:#FFDF00;
     width:100%
 }
 
 .btn {
-    font-size:xx-large;
-    background-color:#f525dd;
+    font-size:x-large;
+    background-image:linear-gradient(#827575,#1a1818);
     border-radius:10px;
+    color:white;
 }
