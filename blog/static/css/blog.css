@@ -1,7 +1,7 @@
 .page-header{
     color:white;
     width:100%;
-    background-color:#141313;
+    background-color:#1f1d1d;
     height:100px;
     padding:10px 10px 10px 10px;
     border-radius:25px;
@@ -28,6 +28,7 @@ a {
     font-size:x-large;
     float:right;
     padding:10px;
+    text-decoration:right;
 
 
     }
@@ -48,7 +49,7 @@ body{
 
 
 .post{
-    background-color:#141313;
+    background-color:#1f1d1d;
 
     height:400px;
     overflow:auto;
@@ -75,7 +76,7 @@ body{
 
 
 .btn{
-    font-size:x-large;
+    font-size:large;
     background-image:linear-gradient(#827575,#1a1818);
     border-radius:10px;
     color:white;
