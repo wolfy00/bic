@@ -65,6 +65,7 @@ def post_remove(request, pk):
     post.delete()
     return redirect('post_list')
 
+@login_required
 def add_comment_to_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
@@ -99,6 +100,5 @@ def sign_up(request):
         username = form.cleaned_data.get('username')
         password = form.cleaned_data.get('password1')
         user = authenticate(username=username, password=password)
-        login(request, user)
-        return redirect('post_list')
+        return redirect('login')
     return render(request, 'sign_up.html', {'form': form})
