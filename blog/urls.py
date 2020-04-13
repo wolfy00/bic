@@ -6,7 +6,7 @@ urlpatterns = [
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
     path('post/new/', views.post_new, name='post_new'),
     path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
-    path('aboutadmin/', views.about_admin, name='about_admin'),
+    path('about_bic/', views.about_bic, name='about_bic'),
     path('drafts/', views.post_draft_list, name='post_draft_list'),
     path('post/<pk>/publish/', views.post_publish, name='post_publish'),
     path('post/<pk>/remove/', views.post_remove, name='post_remove'),
@@ -14,4 +14,5 @@ urlpatterns = [
     path('comment/<int:pk>/approve/', views.comment_approve, name='comment_approve'),
     path('comment/<int:pk>/remove/', views.comment_remove, name='comment_remove'),
     path('signup/', views.sign_up, name='sign_up'),
+    path('author_detail/<int:pk>/', views.author_detail, name='author_detail'),
 ]

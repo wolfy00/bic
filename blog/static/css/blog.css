@@ -5,6 +5,7 @@
     height:100px;
     padding:10px 10px 10px 10px;
     border-radius:25px;
+    margin-right:10px;
 }
 
 a {
@@ -49,8 +50,8 @@ body{
 
 
 .post{
-    background-color:#1f1d1d;
 
+    background-color:#1f1d1d;
     height:400px;
     overflow:auto;
     width:75%;
@@ -108,5 +109,15 @@ body{
     border-radius:20px;
     margin:60px 60px ;
     padding:10px 10px 10px 10px;
+    color:#FFDF00;
+}
+
+.bic{
+    border:1px groove white ;
+    background-color:#1f1d1d;
+    margin-right:0px;
+    text-align:center;
+    height:100%;
+    font-size:large;
     color:#FFDF00;
 }

@@ -13,7 +13,7 @@
 <body>
     <div class="page-header">
         <h1><a href="/">Believe in Creation!!</a></h1>
-        <a href="{% url 'about_admin'%}"><button class="btn">About Admin</button></a>
+        <a href="{% url 'about_bic'%}"><button class="btn">About BiC</button></a>
          {% if user.is_authenticated %}
         <a href="{% url 'post_new' %}" ><button class="btn">+</button></a>
         <a href="{% url 'post_draft_list' %}" <button class="btn" >Edit</button></a>

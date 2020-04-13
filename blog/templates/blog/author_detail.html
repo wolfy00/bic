@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<h2 style="color:grey;">All post of author:-</h2>
+<h1 style="color:#FFDF00;">{{post.author}}</h1>
+
+      {% for p in posts %}
+            {% if post.author == p.author %}
+
+                    <div class="post">
+                 <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ p.title }}</a></h2>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                     <p>published: {{ p.published_date }}</p>
+                     <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ p.approved_comments.count }}</a><br>
+                        <hr>
+                </div>
+                {% endif %}
+                 {% endfor %}
+{% endblock %}

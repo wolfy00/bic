@@ -45,8 +45,8 @@ def post_edit(request, pk):
     return render(request, 'blog/post_edit.html', {'form': form})
 
 
-def about_admin(request):
-    return render(request,'blog/about_admin.html',{})
+def about_bic(request):
+    return render(request, 'blog/about_bic.html', {})
 
 @login_required
 def post_draft_list(request):
@@ -101,4 +101,11 @@ def sign_up(request):
         password = form.cleaned_data.get('password1')
         user = authenticate(username=username, password=password)
         return redirect('login')
-    return render(request, 'sign_up.html', {'form': form})
+    return render(request, 'blog/sign_up.html', {'form': form})
+
+
+def author_detail(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+
+    return render(request, 'blog/author_detail.html', {'posts': posts, 'post': post})
