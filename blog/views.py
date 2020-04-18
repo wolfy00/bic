@@ -2,8 +2,8 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect
 from django.utils import timezone
-from .models import Post,Comment
-from .forms import PostForm,CommentForm
+from .models import Post, Comment
+from .forms import PostForm, CommentForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate
 
@@ -72,6 +72,7 @@ def add_comment_to_post(request, pk):
         form = CommentForm(request.POST)
         if form.is_valid():
             comment = form.save(commit=False)
+            comment.author = request.user
             comment.post = post
             comment.save()
             return redirect('post_detail', pk=post.pk)
@@ -100,7 +101,7 @@ def sign_up(request):
         username = form.cleaned_data.get('username')
         password = form.cleaned_data.get('password1')
         user = authenticate(username=username, password=password)
-        return redirect('login')
+        return redirect('blog/base.html')
     return render(request, 'blog/sign_up.html', {'form': form})
 
 
@@ -109,3 +110,5 @@ def author_detail(request, pk):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
 
     return render(request, 'blog/author_detail.html', {'posts': posts, 'post': post})
+
+

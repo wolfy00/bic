@@ -16,7 +16,7 @@
         <a href="{% url 'about_bic'%}"><button class="btn">About BiC</button></a>
          {% if user.is_authenticated %}
         <a href="{% url 'post_new' %}" ><button class="btn">+</button></a>
-        <a href="{% url 'post_draft_list' %}" <button class="btn" >Edit</button></a>
+        <a href="{% url 'post_draft_list' %}"><button class="btn" >Edit</button></a>
          <p style="float:right; font-size:large;">Hello {{ user.username }} <small><a style="color:white; font-size:20px;" href="{% url 'logout' %}">(Log out)</a></small></p>
 
       {% else %}

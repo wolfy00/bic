@@ -77,22 +77,27 @@ body{
 
 
 .btn{
+
     font-size:large;
     background-image:linear-gradient(#827575,#1a1818);
+    border: 2px groove white;
     border-radius:10px;
     color:white;
 }
-
-.comment{
-    border:2px dashed white;
-    margin-left:10px;
-    padding:10px 10px 10px 10px;
-    position:relative;
-    border
+.comment-container{
+    float:right;
     width:30%;
     height:100%;
+    }
+.comment{
+    background-color:#1f1d1d;
+    border:2px groove white;
+    margin-left:10px;
+    padding:10px 10px 10px 10px;
     font-size:large;
     color:white;
+    border-radius:25px;
+
     }
 
 * {
