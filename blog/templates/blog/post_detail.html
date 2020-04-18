@@ -1,16 +1,17 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-<div class="post-area">
-    <div class="post">
+    <div class="post-detail">
         {% if post.published_date %}
-            <div class="date">
+
+        {% else %}
+            <a class="btn" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
+        {% endif %}
+        <h1>{{ post.title }}</h1>
+        <h2 style="margin-left:20px;font-size">author:- <a href="{% url 'author_detail' pk=post.pk %}">{{post.author}}</a></h2>
+        <div class="date">
                 {{ post.published_date }}
             </div>
-        {% else %}
-            <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
-        {% endif %}
-        <h2>{{ post.title }}</h2>
         <p>{{ post.text|linebreaksbr }}</p>
       {% if post.author == user and user.is_authenticated %}
         <br>
@@ -20,15 +21,15 @@
       {% endif %}
         </div>
 
-    </div>
-
 <br>
-<span class="btn"><a href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a></span>
-
+<span class="btn"><a href="{% url 'add_comment_to_post' pk=post.pk %}"> Add comment</a></span>
+<br>
+<br>
 
 {% for comment in post.comments.all %}
+    <br>
     {% if post.author == user and user.is_authenticated or comment.approved_comment %}
-   <div class="comment-container">
+
     <div class="comment">
             <strong>{{ comment.author }}</strong>
     <br>
@@ -36,12 +37,12 @@
                 <a class="btn" href="{% url 'comment_remove' pk=comment.pk %}">remove</a>
                 <a class="btn" href="{% url 'comment_approve' pk=comment.pk %}">approve</a>
             {% endif %}
-        {{ comment.created_date }}
+        <span style="font-size:small;">{{ comment.created_date }}</span>
 
         <p>{{ comment.text|linebreaks }}</p>
-        <br>
+
     </div>
-   </div>
+
     {% endif %}
 
 {% endfor %}

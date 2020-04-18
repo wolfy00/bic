@@ -4,8 +4,8 @@
 <div class="post-area">
             {% for post in posts %}
                     <div class="post">
-                 <h2 style="font-size:25px;"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-                        <h2 style="margin-left:20px;font-size:20px;">author:- <a href="{% url 'author_detail' pk=post.pk %}">{{post.author}}</a></h2>
+                <strong><h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1></strong>
+                        <h2 style="margin-left:20px;font-size">author:- <a href="{% url 'author_detail' pk=post.pk %}">{{post.author}}</a></h2>
 
                      <p>{{ post.text|linebreaksbr|truncatechars:200 }}</p>
                         <br>
@@ -22,6 +22,7 @@
     <div class="welcome">
         <p>Hey Welcome to the Believe in Creation , express your thought here , puke out what's in your mind  by writing here..
     create an account and start expressing yourself.
-    Show creativity write poems, experiences, incidents , memories,or anything that you want to share feel free to write.  </p>
+    Show creativity write poems, experiences, incidents , memories,or anything that you want to share feel free to write.
+            Have you ever created anything ?? Go! and write about it , it could be anything.</p>
     </div>
 {% endblock %}

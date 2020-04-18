@@ -1,11 +1,11 @@
 .page-header{
     color:white;
-    width:100%;
+    width:95%;
     background-color:#1f1d1d;
     height:100px;
     padding:10px 10px 10px 10px;
     border-radius:25px;
-    margin-right:10px;
+
 }
 
 a {
@@ -16,6 +16,7 @@ a {
 
 
 .page-header h1 a {
+
     float:left;
     padding:10px;
     font-size:xx-large;
@@ -34,17 +35,20 @@ a {
 
     }
 body{
-
+   padding:10px 10px 10px 20px;
     background-color:black;
-    font-family:Comic Sans MS, Comic Sans; }
+    font-family:Comic Sans MS, Comic Sans;
+     }
+
 
 .post-area{
     border-right:2px groove white;
     float:left;
     width:60%;
     padding:10px;
-    height:100%;
+    height:1000px;
     margin-left:10px;
+    overflow:auto;
 
 }
 
@@ -61,11 +65,24 @@ body{
     margin-right:5px;
     padding:10px;
     color: white;
+
+
    }
 
-
+.post-detail{
+    background-color:#1f1d1d;
+    height:600px;
+    overflow:auto;
+    width:95%;
+    border-radius:20px;
+    margin-left:10px;
+    margin-top:20px;
+    margin-right:5px;
+    padding:10px;
+    color: white;
+     }
 .welcome{
-    margin-right:0px;
+    margin-right:25px;
     text-align:center;
     float:right;
     width:30%;
@@ -84,14 +101,11 @@ body{
     border-radius:10px;
     color:white;
 }
-.comment-container{
-    float:right;
-    width:30%;
-    height:100%;
-    }
+
 .comment{
     background-color:#1f1d1d;
     border:2px groove white;
+    margin-right:10px;
     margin-left:10px;
     padding:10px 10px 10px 10px;
     font-size:large;
@@ -101,9 +115,7 @@ body{
     }
 
 * {
-   /* For mobile phones: */
     font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
-    max-width: 100%;
    }
 
 .login{
@@ -120,12 +132,13 @@ body{
 .bic{
     border:1px groove white ;
     background-color:#1f1d1d;
-    margin-right:0px;
     text-align:center;
-    height:100%;
+    padding:10px 10px 10px 10px;
     font-size:large;
     color:#FFDF00;
+    border-radius:5px;
 }
+
 
 
 
