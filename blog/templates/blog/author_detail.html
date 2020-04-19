@@ -8,7 +8,7 @@
             {% if post.author == p.author %}
 
                     <div class="post">
-                 <h1 ><a href="{% url 'post_detail' pk=post.pk %}">{{ p.title }}</a></h1>
+                 <h1 ><a href="{% url 'post_detail' pk=p.pk %}">{{ p.title }}</a></h1>
                         <p>published: {{ p.published_date }}</p>
                     <p>{{ p.text|linebreaksbr }}</p>
 
