@@ -1,15 +1,22 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    {%if posts %}
+ {% if posts %}
     {% for post in posts %}
+          {% if post.author == user %}
+
         <div class="post">
+            <h1 style="color:#FFDF00;">{{ post.title }}</h1>
             <p class="date">created: {{ post.created_date|date:'d-m-Y' }}</p>
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text|truncatechars:200 }}</p>
+            <p>{{ post.text }}</p>
         </div>
+                <br>
+                 <a class="btn" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
+        {% else %}
+      <P style="color:white; text-align:center;">Oops!! no posts to publish.</P>
+       {% endif %}
+
     {% endfor %}
-    {% else %}
-        <p style="color:white; text-size:large;">oops!! you don't have any unpublished articles </p>
-    {% endif %}
+
+{% endif %}
 {% endblock %}

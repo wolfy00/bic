@@ -2,11 +2,7 @@
 
 {% block content %}
     <div class="post-detail">
-        {% if post.published_date %}
 
-        {% else %}
-            <a class="btn" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
-        {% endif %}
         <h1 style="color:#FFDF00;">{{ post.title }}</h1>
         <h2 style="margin-left:20px;font-size">author:- <a href="{% url 'author_detail' pk=post.pk %}">{{post.author}}</a></h2>
         <div class="date">
@@ -19,6 +15,10 @@
         <a class="btn" href="{% url 'post_edit' pk=post.pk %}">Edit</a>
         <a class="btn" href="{% url 'post_remove' pk=post.pk %}">Remove</a>
       {% endif %}
+        {% if not post.published_date %}
+         <a class="btn" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
+        {% endif %}
+
         </div>
 
 <br>
