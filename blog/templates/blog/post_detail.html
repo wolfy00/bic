@@ -17,10 +17,11 @@
       {% endif %}
         {% if not post.published_date %}
          <a class="btn" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
+         <a class="btn" href="{% url 'post_list' %}">Save as draft</a>
         {% endif %}
 
         </div>
-
+=
 <br>
 <span class="btn"><a href="{% url 'add_comment_to_post' pk=post.pk %}"> Add comment</a></span>
 <br>
