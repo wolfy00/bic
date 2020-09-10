@@ -83,6 +83,18 @@ body{
     color: white;
     overflow:auto;
      }
+
+.post::-webkit-scrollbar {
+    display: none;
+}
+.post-detail::-webkit-scrollbar {
+    display: none;
+}
+
+.post-area::-webkit-scrollbar {
+    display: none;
+}
+
 .welcome{
 
     margin-right:5px;
